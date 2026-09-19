@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тед Лассо</title>
+    <meta name="description" content="Комедийный сериал о тренере Теде Лассо, который возглавил футбольный клуб Ричмонд в Англии.">
+    <link rel="stylesheet" href="styles.css"> 
+<style>
+    body {
+    background-image: url('images/bg.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #141414; 
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;     margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 1200px; 
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.vk {
+  color: #FFD700;
+}
+
+h1, h2 {
+    color: #ffffff; 
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.tab-btn.active {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+.episode-item {
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.episode-item:hover {
+    background-color: #f0f0f0;
+}
+
+.episode-item.active-episode {
+    background-color: #e2f0ff;
+    border-left: 4px solid #007bff;
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<header class="site-header">
+    <div class="logo">Лонгборд Сериала</div>
+</header>
+
+<main class="main-content">
+    <section class="serial-preview">
+        <h1>"Тед Лассо" фан-сайт сериала</h1>
+        
+        <div class="ratings">
+            <span class="rating-imdb">8.20</span>
+            <span class="rating-kinopoisk">8.80</span>
+        </div>
+
+        <div class="serial-info">
+            <img src="poster.jpg" alt="Постер Тед Лассо">
+            <ul>
+                <li><strong>Год:</strong> 2020 / 30 мин.</li>
+                <li><strong>Возраст:</strong> 18+</li>
+                <li><strong>Жанр:</strong> Комедия</li>
+                <li><strong>Страна:</strong> США, Великобритания</li>
+                <li><strong>Режиссёр:</strong> Деклан Лауни, М.Дж. Делани</li>
+            </ul>
+        </div>
+
+        <div class="cast">
+            <strong>В ролях:</strong> Джейсон Судейкис, Ханна Уэддингхэм, Джереми Свифт и др.
+        </div>
+
+        <p class="description">
+            «Тед Лассо» — комедийный сериал, который рассказывает о Теде Лассо, тренере по американскому футболу...
+        </p>
+
+        <!-- Кнопки шаринга в соцсети, можно будет это удалить -->
+        <div class="share-buttons">
+            <a href="#" class="vk">ВКонтакте</a>
+        </div>
+    </section>
+     <section class="seasons-block">
+        <!-- Вкладки сезонов -->
+        <div class="season-tabs">
+            <button class="tab-btn active">1 сезон</button>
+            <button class="tab-btn">2 сезон</button>
+            <button class="tab-btn">3 сезон</button>
+            <button class="tab-btn">4 сезон</button>
+        </div>
+
+        <!-- Списки серий для каждого сезона -->
+        <div class="episodes-list" id="season-1">
+            <h2>1 сезон</h2>
+            <div class="episode-item">1 сезон 1 серия</div>
+            <div class="episode-item">1 сезон 2 серия</div>
+        </div>
+
+        <div class="episodes-list" id="season-2" style="display:none;">
+            <h2>2 сезон</h2>
+            <div class="episode-item">2 сезон 1 серия</div>
+        </div>
+        
+        <div class="episodes-list" id="season-3" style="display:none;">
+            <h2>3 сезон</h2>
+            <div class="episode-item">3 сезон Спецвыпуск</div>
+            <div class="episode-item">3 сезон 1 серия</div>
+        </div>
+    </section>
+    <section class="seo-info">
+        <h2>«Тед Лассо» — Про Что Сериал?</h2>
+        <p>«Тед Лассо» — это комедийный сериал, который рассказывает историю...</p>
+
+        <h2>5 Интересных Фактов О Сериале «Тед Лассо»</h2>
+        <ol>
+            <li><strong>Критическое Признание:</strong> Сериал получил множество наград...</li>
+            <li><strong>Основной Мотив:</strong> Важность доброты и поддержки...</li>
+        </ol>
+
+        <h2>Основные Герои Сериала «Тед Лассо»</h2>
+        <ul>
+            <li><strong>Тед Лассо</strong> (Джейсон Судейкис) — оптимистичный тренер...</li>
+            <li><strong>Рейчел</strong> (Ханна Уаддингхэм) — владелица клуба...</li>
+        </ul>
+    </section>
+     <section class="comments-section">
+        <h2>Написать отзыв</h2>
+        <form action="/submit-comment" method="POST" class="comment-form">
+            <label for="username">Ваше имя:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="comment-text">Текст комментария:</label>
+            <textarea id="comment-text" name="comment_text" required></textarea>
+
+            <div class="avatar-picker">
+                <span class="label">Ваш аватар:</span>
+                <input type="radio" name="avatar" value="1" id="av1"><label for="av1">Аватар 1</label>
+                <input type="radio" name="avatar" value="2" id="av2"><label for="av2">Аватар 2</label>
+            </div>
+
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <p>Все материалы расположенные на сайте не являются публичной офертой...</p>
+    <p>Данный ресурс носит исключительно информационно-ознакомительный характер.</p>
+</footer>
+
+</body>
+</html>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    // === 1. ПЕРЕКЛЮЧЕНИЯ СЕЗОНОВ ===
+    const tabs = document.querySelectorAll('.tab-btn');
+    const lists = document.querySelectorAll('.episodes-list');
+
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            // Скрываем все списки серий
+            lists.forEach(list => list.style.display = 'none');
+
+            // Активируем текущую вкладку сезона
+            tab.classList.add('active');
+            // Показываем список серий, соответствующий этой вкладке
+            lists[index].style.display = 'block';
+        });
+    });
+
+   
+</script>

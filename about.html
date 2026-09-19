@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Тед Лассо 1 Сезон 1 Серия Смотреть</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.site-header {
+    background-color: #1f1f1f;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.breadcrumbs a { color: #ffffff; text-decoration: none; }
+
+.player-section {
+    background: #1f1f1f;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+.tab-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.tab-btn.active { background: #00bcd4; }
+.video-container {
+    width: 100%;
+    height: 450px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.series-nav { display: flex; justify-content: space-between; margin-top: 15px; }
+.nav-link { color: #fff; text-decoration: none; background: #333; padding: 10px 15px; border-radius: 4px; }
+.nav-link.disabled { opacity: 0.5; pointer-events: none; }
+
+.emotions-section { display: flex; gap: 15px; margin: 20px 0; flex-wrap: wrap; }
+.emotion-item { background: #222; padding: 10px 15px; border-radius: 20px; cursor: pointer; }
+.emotion-item:hover { background: #333; }
+
+
+.comment-card { display: flex; gap: 15px; background: #1f1f1f; padding: 15px; border-radius: 6px; margin-bottom: 15px; }
+.avatar { width: 50px; height: 50px; background: #444; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 24px; }
+.comment-author { font-weight: bold; margin-bottom: 5px; }
+.comment-author .date { font-size: 12px; color: #aaa; margin-left: 10px; }
+.comment-actions { display: flex; gap: 15px; margin-top: 10px; font-size: 13px; }
+.reply-btn { background: none; border: none; color: #00bcd4; cursor: pointer; }
+
+
+.comment-form { background: #1f1f1f; padding: 20px; border-radius: 6px; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; }
+.form-group input, .form-group textarea { width: 100%; padding: 10px; background: #333; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; }
+.submit-btn { background: #00bcd4; color: #fff; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; }
+</style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">Лонгборд Сериала</div>
+        <nav class="breadcrumbs">
+            <a href="#">Главная</a> &gt; <span>1 сезон 1 серия</span>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-container">
+        <h1>Тед Лассо 1 сезон 1 серия смотреть онлайн</h1>
+
+        <!-- Блок плеера и переключения серий -->
+        <section class="player-section">
+            <div class="tabs">
+                <button class="tab-btn active" data-player="1">Плеер 1</button>
+                <button class="tab-btn" data-player="2">Плеер 2</button>
+                <button class="tab-btn" data-player="3">Плеер 3</button>
+            </div>
+            
+            <div class="video-container">
+                <div id="video-placeholder">Экран воспроизведения (Плеер 1)</div>
+            </div>
+
+            <div class="series-nav">
+                <a href="#" class="nav-link disabled">Список серий</a>
+                <a href="#" class="nav-link next-btn">Следующая &rarr;</a>
+            </div>
+        </section>
+
+        <!-- Блок реакций (эмоций) -->
+        <section class="emotions-section">
+            <div class="emotion-item" data-id="1"><span>😊 Эмоция 1</span> <b class="count">67</b></div>
+            <div class="emotion-item" data-id="2"><span>😂 Эмоция 2</span> <b class="count">67</b></div>
+            <div class="emotion-item" data-id="3"><span>😮 Эмоция 3</span> <b class="count">67</b></div>
+            <div class="emotion-item" data-id="4"><span>😢 Эмоция 4</span> <b class="count">67</b></div>
+        </section>
+
+        <!-- Описание серии -->
+        <section class="description-section">
+            <h2>Описание 1 серии 1 сезона сериала «Тед Лассо»</h2>
+            <p>Сериал «Тед Лассо» начинается с увлекательной и запоминающейся первой серии...</p>
+        </section>
+
+        <!-- Отзывы и комментарии -->
+        <section class="comments-section">
+            <h2>Отзывы и комментарии</h2>
+            
+            <div class="comments-list">
+            </div>
+
+            <!-- Форма отправки -->
+            <form id="comment-form" class="comment-form">
+                <h3>Написать отзыв</h3>
+                <div class="form-group">
+                    <label>Ваше имя:</label>
+                    <input type="text" id="username" required>
+                </div>
+                <div class="form-group">
+                    <label>Текст комментария:</label>
+                    <textarea id="comment-body" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', () => {
+
+    const tabs = document.querySelectorAll('.tab-btn');
+    const videoPlaceholder = document.getElementById('video-placeholder');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            const playerNum = tab.getAttribute('data-player');
+            videoPlaceholder.textContent = `Экран воспроизведения (Плеер ${playerNum})`;
+        });
+    });
+
+    const emotionItems = document.querySelectorAll('.emotion-item');
+    emotionItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const countElem = item.querySelector('.count');
+            let currentCount = parseInt(countElem.textContent);
+            countElem.textContent = currentCount + 1;
+        });
+    });
+
+    const form = document.getElementById('comment-form');
+    const commentsList = document.querySelector('.comments-list');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const commentBody = document.getElementById('comment-body').value;
+        const currentDate = new Date().toLocaleDateString('ru-RU');
+        const newComment = document.createElement('div');
+        newComment.classList.add('comment-card');
+        newComment.innerHTML = `
+            <div class="avatar"></div>
+            <div class="comment-content">
+                <div class="comment-author">${username} <span class="date">${currentDate}</span></div>
+                <p class="comment-text">${commentBody}</p>
+                <div class="comment-actions">
+                    <span class="likes"> <span>0</span></span>
+                    <button class="reply-btn">Ответить</button>
+                </div>
+            </div>
+        `;
+
+        commentsList.appendChild(newComment);
+        form.reset();
+    });
+});
+
+
+    </script>
+</body>
+</html>
